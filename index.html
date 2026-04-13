@@ -926,6 +926,32 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+  /* ── STOCK LABELS ── */
+  .stock-label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .in-stock { color: #3a7d44; background: #eaf4ec; }
+  .low-stock { color: #a05c00; background: #fdf3e3; }
+  .sold-out { color: #888; background: #f0f0f0; }
+  .is-soldout { opacity: 0.72; }
+  .soldout-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.45);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #555;
+    font-family: var(--font-sans);
+  }
+
   /* ── SCROLL ANIMATIONS ── */
   .reveal {
     opacity: 0;
@@ -1148,140 +1174,8 @@
     </div>
     <a class="view-all" href="#">View All New Arrivals</a>
   </div>
-  <div class="product-grid">
-    <!-- Product 1 -->
-    <div class="product-card reveal" onclick="addToCart('Berluti Venezia Briefcase','$3,450','💼')">
-      <div class="product-img-wrap">
-        <span>💼</span>
-        <div class="product-img-overlay"></div>
-        <span class="product-badge gold">New In</span>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Berluti</div>
-        <div class="product-name">Venezia Leather Briefcase</div>
-        <div class="product-price"><strong>$3,450</strong></div>
-      </div>
-    </div>
-    <!-- Product 2 -->
-    <div class="product-card reveal" style="transition-delay:0.08s" onclick="addToCart('Bottega Veneta Tote','$2,200','👜')">
-      <div class="product-img-wrap" style="background:#e8e0d4">
-        <span>👜</span>
-        <div class="product-img-overlay"></div>
-        <span class="product-badge">Exclusive</span>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Bottega Veneta</div>
-        <div class="product-name">Intrecciato Tote Bag</div>
-        <div class="product-price"><strong>$2,200</strong></div>
-      </div>
-    </div>
-    <!-- Product 3 -->
-    <div class="product-card reveal" style="transition-delay:0.16s" onclick="addToCart('Tom Ford Gold Ring','$890','💍')">
-      <div class="product-img-wrap" style="background:#e4ddd4">
-        <span>💍</span>
-        <div class="product-img-overlay"></div>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Tom Ford</div>
-        <div class="product-name">T-Bar Gold Signet Ring</div>
-        <div class="product-price"><strong>$890</strong></div>
-      </div>
-    </div>
-    <!-- Product 4 -->
-    <div class="product-card reveal" style="transition-delay:0.24s" onclick="addToCart('Hermès Leather Belt','$680','🪢')">
-      <div class="product-img-wrap" style="background:#ddd4c4">
-        <span>🪢</span>
-        <div class="product-img-overlay"></div>
-        <span class="product-badge gold">New In</span>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Hermès</div>
-        <div class="product-name">H-Buckle Leather Belt 32mm</div>
-        <div class="product-price"><strong>$680</strong></div>
-      </div>
-    </div>
-    <!-- Product 5 -->
-    <div class="product-card reveal" onclick="addToCart('Loewe Puzzle Bag','$2,750','👜')">
-      <div class="product-img-wrap" style="background:#d8e0d8">
-        <span>👜</span>
-        <div class="product-img-overlay"></div>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Loewe</div>
-        <div class="product-name">Puzzle Small Shoulder Bag</div>
-        <div class="product-price"><strong>$2,750</strong></div>
-      </div>
-    </div>
-    <!-- Product 6 -->
-    <div class="product-card reveal" style="transition-delay:0.08s" onclick="addToCart('Gucci GG Belt','$450','🪢')">
-      <div class="product-img-wrap" style="background:#e8e4d4">
-        <span>🪢</span>
-        <div class="product-img-overlay"></div>
-        <span class="product-badge">Best Seller</span>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Gucci</div>
-        <div class="product-name">GG Marmont Leather Belt</div>
-        <div class="product-price"><strong>$450</strong></div>
-      </div>
-    </div>
-    <!-- Product 7 -->
-    <div class="product-card reveal" style="transition-delay:0.16s" onclick="addToCart('Cartier Bracelet','$1,850','💍')">
-      <div class="product-img-wrap" style="background:#e8e0d0">
-        <span>📿</span>
-        <div class="product-img-overlay"></div>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Cartier</div>
-        <div class="product-name">Juste un Clou Bracelet</div>
-        <div class="product-price"><strong>$1,850</strong></div>
-      </div>
-    </div>
-    <!-- Product 8 -->
-    <div class="product-card reveal" style="transition-delay:0.24s" onclick="addToCart('Saint Laurent Portfolio','$1,290','💼')">
-      <div class="product-img-wrap" style="background:#d4d0cc">
-        <span>💼</span>
-        <div class="product-img-overlay"></div>
-        <span class="product-badge gold">New In</span>
-        <div class="product-actions">
-          <button class="action-btn" title="Quick View">⤢</button>
-          <button class="action-btn" title="Wishlist">♡</button>
-        </div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Saint Laurent</div>
-        <div class="product-name">Cassandre Slim Portfolio Bag</div>
-        <div class="product-price"><strong>$1,290</strong></div>
-      </div>
-    </div>
+  <div class="product-grid" id="product-grid">
+    <!-- Products injected by JavaScript — edit the PRODUCTS array in the script below -->
   </div>
 </div>
 
@@ -1487,59 +1381,207 @@
 <div class="toast" id="toast"></div>
 
 <script>
-// Cart state
+/* ================================================================
+   ✏️  YOUR PRODUCTS — EDIT THIS LIST TO ADD / MODIFY ARTICLES
+   ================================================================
+   Each product has these fields:
+   - id        : unique number, don't repeat
+   - brand     : designer / brand name
+   - name      : product name shown on card
+   - price     : price as string e.g. "$1,200"
+   - emoji     : icon shown as placeholder image
+   - bg        : background color of the image area (hex or color name)
+   - badge     : optional label on the card — "New In" | "Exclusive" | "Best Seller" | "" (leave empty for none)
+   - badgeGold : true = gold badge, false = black badge
+   - stock     : number of items in stock. Set to 0 → shows "Sold Out" automatically
+   ================================================================ */
+
+const PRODUCTS = [
+  {
+    id: 1,
+    brand: "Berluti",
+    name: "Venezia Leather Briefcase",
+    price: "$3,450",
+    emoji: "💼",
+    bg: "#e8e4dc",
+    badge: "New In",
+    badgeGold: true,
+    stock: 3
+  },
+  {
+    id: 2,
+    brand: "Bottega Veneta",
+    name: "Intrecciato Tote Bag",
+    price: "$2,200",
+    emoji: "👜",
+    bg: "#e8e0d4",
+    badge: "Exclusive",
+    badgeGold: false,
+    stock: 5
+  },
+  {
+    id: 3,
+    brand: "Tom Ford",
+    name: "T-Bar Gold Signet Ring",
+    price: "$890",
+    emoji: "💍",
+    bg: "#e4ddd4",
+    badge: "",
+    badgeGold: false,
+    stock: 0
+  },
+  {
+    id: 4,
+    brand: "Hermès",
+    name: "H-Buckle Leather Belt 32mm",
+    price: "$680",
+    emoji: "🪢",
+    bg: "#ddd4c4",
+    badge: "New In",
+    badgeGold: true,
+    stock: 8
+  },
+  {
+    id: 5,
+    brand: "Loewe",
+    name: "Puzzle Small Shoulder Bag",
+    price: "$2,750",
+    emoji: "👜",
+    bg: "#d8e0d8",
+    badge: "",
+    badgeGold: false,
+    stock: 2
+  },
+  {
+    id: 6,
+    brand: "Gucci",
+    name: "GG Marmont Leather Belt",
+    price: "$450",
+    emoji: "🪢",
+    bg: "#e8e4d4",
+    badge: "Best Seller",
+    badgeGold: false,
+    stock: 0
+  },
+  {
+    id: 7,
+    brand: "Cartier",
+    name: "Juste un Clou Bracelet",
+    price: "$1,850",
+    emoji: "📿",
+    bg: "#e8e0d0",
+    badge: "",
+    badgeGold: false,
+    stock: 4
+  },
+  {
+    id: 8,
+    brand: "Saint Laurent",
+    name: "Cassandre Slim Portfolio Bag",
+    price: "$1,290",
+    emoji: "💼",
+    bg: "#d4d0cc",
+    badge: "New In",
+    badgeGold: true,
+    stock: 1
+  }
+  /* ── ADD A NEW PRODUCT BELOW ──────────────────────────────────
+  ,{
+    id: 9,
+    brand: "Your Brand",
+    name: "Your Product Name",
+    price: "$500",
+    emoji: "👜",
+    bg: "#e0dcd4",
+    badge: "New In",
+    badgeGold: true,
+    stock: 10
+  }
+  ──────────────────────────────────────────────────────────── */
+];
+
+/* ================================================================
+   ⚙️  ENGINE — no need to edit below this line
+   ================================================================ */
+
 let cart = [];
 
-// Scroll header shadow
-window.addEventListener('scroll', () => {
-  const h = document.getElementById('header');
-  h.classList.toggle('scrolled', window.scrollY > 10);
-});
+// ── Build product cards from PRODUCTS array
+function renderProducts() {
+  const grid = document.getElementById('product-grid');
+  grid.innerHTML = PRODUCTS.map((p, i) => {
+    const soldOut = p.stock === 0;
+    const lowStock = p.stock > 0 && p.stock <= 2;
+    const delay = (i % 4) * 0.08;
+    const badgeHTML = soldOut
+      ? `<span class="product-badge" style="background:#888">Sold Out</span>`
+      : p.badge
+        ? `<span class="product-badge ${p.badgeGold ? 'gold' : ''}">${p.badge}</span>`
+        : '';
+    const stockHTML = soldOut
+      ? `<div class="stock-label sold-out">— Sold Out</div>`
+      : lowStock
+        ? `<div class="stock-label low-stock">Only ${p.stock} left</div>`
+        : `<div class="stock-label in-stock">${p.stock} in stock</div>`;
+    const cardClick = soldOut
+      ? `onclick="showToast('This piece is currently sold out.')" style="cursor:not-allowed"`
+      : `onclick="addToCart(${p.id})"`;
+    return `
+    <div class="product-card reveal ${soldOut ? 'is-soldout' : ''}" style="transition-delay:${delay}s" ${cardClick}>
+      <div class="product-img-wrap" style="background:${p.bg}">
+        <span>${p.emoji}</span>
+        <div class="product-img-overlay"></div>
+        ${badgeHTML}
+        ${!soldOut ? `<div class="product-actions">
+          <button class="action-btn" title="Quick View" onclick="event.stopPropagation();showToast('Quick view — coming soon')">⤢</button>
+          <button class="action-btn" title="Wishlist" onclick="event.stopPropagation();showToast('Added to wishlist')">♡</button>
+        </div>` : ''}
+        ${soldOut ? `<div class="soldout-overlay">Sold Out</div>` : ''}
+      </div>
+      <div class="product-info">
+        <div class="product-brand">${p.brand}</div>
+        <div class="product-name">${p.name}</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px">
+          <div class="product-price"><strong>${p.price}</strong></div>
+          ${stockHTML}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
 
-// Reveal on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Cart toggle
-function toggleCart() {
-  const s = document.getElementById('cart-sidebar');
-  const o = document.getElementById('cart-overlay');
-  s.classList.toggle('open');
-  o.classList.toggle('show');
+  // Re-observe new cards for scroll reveal
+  document.querySelectorAll('.reveal').forEach(el => {
+    if (!el.classList.contains('visible')) observer.observe(el);
+  });
 }
 
-// Add to cart
-function addToCart(name, price, emoji) {
-  const existing = cart.find(i => i.name === name);
+// ── Add to cart by product id
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p || p.stock === 0) { showToast('This piece is sold out.'); return; }
+  const existing = cart.find(i => i.id === id);
   if (existing) { showToast('Already in your selection'); return; }
-  cart.push({ name, price, emoji });
+  cart.push({ id: p.id, name: p.name, price: p.price, emoji: p.emoji, brand: p.brand });
   renderCart();
-  showToast('Added to your selection');
+  showToast('Added to your selection ✦');
   if (!document.getElementById('cart-sidebar').classList.contains('open')) {
     setTimeout(toggleCart, 200);
   }
 }
 
+// ── Render cart sidebar
 function renderCart() {
   const count = cart.length;
   document.getElementById('cart-count').textContent = count;
   document.getElementById('cart-count-sidebar').textContent = count;
   const body = document.getElementById('cart-body');
-  const empty = document.getElementById('cart-empty');
   const footer = document.getElementById('cart-footer');
-  
   if (count === 0) {
-    empty.style.display = 'block';
+    body.innerHTML = `<div class="cart-empty">Your cart is empty.<br><span style="color:var(--gold)">Discover new arrivals →</span></div>`;
     footer.style.display = 'none';
-    body.innerHTML = '';
-    body.appendChild(empty);
     return;
   }
-  empty.style.display = 'none';
   footer.style.display = 'block';
-  
   let total = 0;
   body.innerHTML = cart.map((item, i) => {
     const price = parseInt(item.price.replace(/[$,]/g,''));
@@ -1547,14 +1589,13 @@ function renderCart() {
     return `<div class="cart-item">
       <div class="cart-item-img">${item.emoji}</div>
       <div class="cart-item-info">
-        <div class="cart-item-brand">Luxury Goods</div>
+        <div class="cart-item-brand">${item.brand}</div>
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">${item.price}</div>
         <button class="cart-remove" onclick="removeFromCart(${i})">Remove</button>
       </div>
     </div>`;
   }).join('');
-  
   document.getElementById('cart-total').textContent = '$' + total.toLocaleString();
 }
 
@@ -1563,7 +1604,24 @@ function removeFromCart(i) {
   renderCart();
 }
 
-// Toast
+// ── Scroll header shadow
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// ── Scroll reveal observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── Cart toggle
+function toggleCart() {
+  document.getElementById('cart-sidebar').classList.toggle('open');
+  document.getElementById('cart-overlay').classList.toggle('show');
+}
+
+// ── Toast
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -1571,7 +1629,7 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 2800);
 }
 
-// Newsletter
+// ── Newsletter
 function subscribeNewsletter() {
   const el = document.getElementById('nl-email');
   if (el.value && el.value.includes('@')) {
@@ -1581,6 +1639,9 @@ function subscribeNewsletter() {
     showToast('Please enter a valid email address.');
   }
 }
+
+// ── Init
+renderProducts();
 </script>
 </body>
 </html>
